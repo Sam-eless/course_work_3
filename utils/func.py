@@ -1,6 +1,6 @@
 import requests
 from datetime import datetime
-from pprint import pprint
+
 
 def get_data(url):
 
@@ -34,11 +34,13 @@ def get_formatted_data(data):
         date = datetime.strptime(x["date"], "%Y-%m-%dT%H:%M:%S.%f").strftime("%d.%m.%Y")
         description = x["description"]
         from_info, from_bill = "", ""
+
         if "from" in x:
             sender = x["from"].split()
             from_bill = sender.pop(-1)
             from_bill = f'{from_bill[:4]} {from_bill[4:6]}** **** {from_bill[-4:]}'
             from_info = " ".join(sender)
+
         to = f"{x['to'].split()[0]} **{x['to'][-4:]}"
         operation_amount = f"{x['operationAmount']['amount']} {x['operationAmount']['currency']['name']}"
 
@@ -47,4 +49,3 @@ def get_formatted_data(data):
                               f'{operation_amount}')
 
     return formatted_data
-

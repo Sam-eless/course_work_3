@@ -1,6 +1,4 @@
 from utils.func import get_data, get_filtered_data, get_last_values, get_formatted_data
-from pprint import pprint
-
 
 
 def main():
@@ -21,6 +19,7 @@ def main():
     print("INFO: Вывод данных")
     for x in data:
         print(x, end='\n\n')
+
 
 if __name__ == '__main__':
     main()
