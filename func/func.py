@@ -50,6 +50,6 @@ def get_formatted_data(data):
 
         formatted_data.append(f'{date} {description} \n'
                               f'{from_info} {from_bill} --> {to}\n'
-                              f'{operation_amount}')
+                              f'{operation_amount}\n')
 
     return formatted_data

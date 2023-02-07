@@ -17,8 +17,8 @@ def main():
     data = get_formatted_data(data)
 
     print("INFO: Вывод данных")
-    for x in data:
-        print(x, end='\n\n')
+    for operation in data:
+        print(operation)
 
 
 if __name__ == '__main__':
