@@ -1,5 +1,5 @@
 import pytest
-from utils.func import get_data, get_filtered_data, get_last_values, get_formatted_data
+from func.func import get_data, get_filtered_data, get_last_values, get_formatted_data
 
 
 def test_get_data(test_url, test_url_wrong, test_url_pikabu, test_url_status):

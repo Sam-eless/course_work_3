@@ -1,4 +1,4 @@
-from utils.func import get_data, get_filtered_data, get_last_values, get_formatted_data
+from func.func import get_data, get_filtered_data, get_last_values, get_formatted_data
 
 
 def main():
